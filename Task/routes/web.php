@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Route::resource('user','usercontroller');
+Route::get('/email_validate','usercontroller@email_validate');
+Route::get('/login','usercontroller@login');
+Route::post('/post_login','usercontroller@post_login');
+Route::get('/dashboard','usercontroller@dashboard');
+Route::get('/logout','usercontroller@logout');

@@ -11,7 +11,7 @@ class CreateRegisterusersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
         Schema::create('registerusers', function (Blueprint $table) {
             $table->bigIncrements('id');
