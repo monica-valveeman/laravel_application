@@ -1,0 +1,49 @@
+$(document).ready(function(){
+    $("#userdetailform").validate({
+
+        rules:{
+        profile_upload:{
+            required:true
+        },
+        date_of_birth:{
+            required:true
+        },
+        address:{
+            required:true            
+        },
+        state:{
+            required:true
+        },
+        city:{
+            required:true
+        },
+        user_id:{
+            required:true,
+            number:true
+        },
+    },
+    messages:{
+        profile_upload:{
+            required:'*required'
+        },
+        date_of_birth:{
+            required:'*required'
+        },
+        address:{
+            required:'*required'            
+        },
+        state:{
+            required:'*required'
+        },
+        city:{
+            required:'*required'
+        },
+        user_id:{
+            required:'*required',
+            number:'only numbers are allowed'
+        },
+        
+    },
+
+    });
+});

@@ -59,7 +59,7 @@ class usercontroller extends Controller
     
     public function post_login(Request $request){
         $login=$request->only('email_id','password');
-        if(Auth::guard('registeruser')->attempt($login)){
+        if(Auth::attempt($login)){
             return redirect('/dashboard');
         }
         else{
@@ -68,7 +68,7 @@ class usercontroller extends Controller
     }
 
     public function dashboard(){
-        if(Auth::guard('registeruser')->check()){
+        if(Auth::check()){
             return view('user.Dashboard');
         }
     }
@@ -88,7 +88,7 @@ class usercontroller extends Controller
 
     public function logout(){
         Session::flush();
-        Auth::guard('registeruser')->logout();
+        Auth::logout();
         return redirect('/login');
     }
 

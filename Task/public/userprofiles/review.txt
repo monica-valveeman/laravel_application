@@ -1,0 +1,11 @@
+1. Why checked the publish permission?
+It allows you to grant roles on the site.
+
+2. what is create new revision?
+It is the part of publish permission on site, it 
+creates a node into new version.
+
+3. How to display the image in home page content?
+Go to content types, select the content on your wish.
+Click Manage display on content type.
+Edit the fields in custom display settings.

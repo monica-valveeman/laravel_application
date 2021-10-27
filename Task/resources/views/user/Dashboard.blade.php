@@ -1,2 +1,2 @@
 <h1>Dashboard</h1>
-<p>Welcome, {{Auth::guard('registeruser')->user()->firstname}}</p>
+<p>Welcome, {{Auth::user()->firstname}}</p>

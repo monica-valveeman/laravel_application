@@ -21,3 +21,8 @@ Route::get('/login','usercontroller@login');
 Route::post('/post_login','usercontroller@post_login');
 Route::get('/dashboard','usercontroller@dashboard');
 Route::get('/logout','usercontroller@logout');
+
+Route::get('/userdetails/create','userdetailcontroller@create');
+Route::post('/userdetails','userdetailcontroller@store')->name('userdetails.store');
+
+
