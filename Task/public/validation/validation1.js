@@ -1,4 +1,29 @@
 $(document).ready(function(){
+
+
+    
+$('select[name="state"]').on('change', function() {
+    var stateID = $(this).val();
+    if(stateID) {
+        $.ajax({
+            url: '/userdetails/create/'+stateID,
+            type: "GET",
+            dataType: "json",
+            success:function(data) {
+
+                
+                $('select[name="city"]').empty();
+                $.each(data, function(key, value) {
+                    $('select[name="city"]').append('<option value="'+ key +'">'+ value +'</option>');
+                });
+
+
+            }
+        });
+    }else{
+        $('select[name="city"]').empty();
+    }
+});
     $("#userdetailform").validate({
 
         rules:{

@@ -67,7 +67,7 @@ class usercontroller extends Controller
         }
     }
 
-    public function dashboard(){
+    public function dashboard(){ 
         if(Auth::check()){
             return view('user.Dashboard');
         }

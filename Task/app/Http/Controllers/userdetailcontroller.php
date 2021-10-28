@@ -10,8 +10,7 @@ class userdetailcontroller extends Controller
 {
     public function create(){
         $states=DB::table("state")->pluck("state_name","id");
-        $cities=DB::table("city")->pluck("city_name","id");
-        return view('userdetails.create',compact('states'),compact('cities'));
+        return view('userdetails.create',compact('states'));
     }
 
     public function store(Request $request){
@@ -34,6 +33,12 @@ class userdetailcontroller extends Controller
             $userdetail->save();
 
             return redirect('/userdetails');
+    }
+
+    public function cityrequest($id)
+    {
+        $cities = DB::table("city")->where("state_id",$id)->pluck("city_name","id");
+        return json_encode($cities);
     }
 
 }

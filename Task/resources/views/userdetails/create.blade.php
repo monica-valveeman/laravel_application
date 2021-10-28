@@ -11,7 +11,6 @@
     <body>
         <h1>User Details</h1>
         <form id="userdetailform" action="{{route('userdetails.store')}}" method="POST" enctype="multipart/form-data">
-        @method('PUT')
             <table>
                 <tr>
                     <td align="right"><label> Profile Upload:</label></td>
@@ -37,11 +36,6 @@
                 <tr>
                     <td align="right"><label>City:</label></td>
                     <td align="left"><select name="city">
-                    <option value="">---Select Cities---</option>
-                        @foreach($cities as $key=>$value)
-                        <option value="{{$key}}">{{$value}}</option>
-                        @endforeach
-                   
                     </select></td>
                 </tr>
                 <tr>

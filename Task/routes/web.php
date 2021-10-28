@@ -25,4 +25,9 @@ Route::get('/logout','usercontroller@logout');
 Route::get('/userdetails/create','userdetailcontroller@create');
 Route::post('/userdetails','userdetailcontroller@store')->name('userdetails.store');
 
+Route::get('/userdetails/create/{id}','userdetailcontroller@cityrequest');
+
+Route::get('/education/create','educationcontroller@create');
+Route::post('/education','educationcontroller@store');
+
 
