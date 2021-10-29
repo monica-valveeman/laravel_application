@@ -10,4 +10,13 @@ class Registeruser extends Authenticatable
 {
     protected $table="registerusers";
     protected $fillable=['firstname','lastname','email_id','password'];
+
+
+    public function details(){
+        return $this->hasMany('App\Usedetails');
+    }
+
+    public function education(){
+        return $this->hasMany('App\Education');
+    }
 }
