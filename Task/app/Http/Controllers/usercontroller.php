@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Registeruser;
 use Auth;
-use Session;
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Str;
 
@@ -87,7 +87,7 @@ class usercontroller extends Controller
     }
 
     public function logout(){
-        Session::flush();
+        
         Auth::logout();
         return redirect('/login');
     }

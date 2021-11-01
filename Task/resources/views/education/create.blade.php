@@ -56,13 +56,13 @@
                             <option value="">...PG Degrees...</option>
                                 <?php
                                     $PG = ['M.Sc Maths','M.Sc Physics','M.Sc Chemistry', 'M.Sc CS','M.Sc IT','M.B.A', 'M.C.A'];
-                                    $j=0;
-                                    $output1="";
-                                        for($j;$j<sizeof($PG);$j++)
+                                    $k=0;
+                                    $output2="";
+                                        for($k;$k<sizeof($PG);$k++)
                                         {
-                                            $output1 .= "<option value='".$PG[$j]."'>".$PG[$j]."</option>";
+                                            $output2 .= "<option value='".$PG[$k]."'>".$PG[$k]."</option>";
                                         }   
-                                    echo $output1;
+                                    echo $output2;
                                 ?>
                         </select>
                     </td>

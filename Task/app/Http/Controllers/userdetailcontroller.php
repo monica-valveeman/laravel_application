@@ -30,6 +30,7 @@ class userdetailcontroller extends Controller
             $userdetail->city=$request->city;
 
             $userdetail->user_id=$request->user_id;
+            
             $userdetail->save();
 
             return redirect('/userdetails');
