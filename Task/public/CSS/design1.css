@@ -1,0 +1,29 @@
+.div1{
+    margin: auto;
+    background-color: #deb887;
+    text-align: center;
+    height:50%;
+    width:50%;
+    padding: 30px 10px -10px 10px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+input[type="text"],
+input[type="file"],
+input[type="password"],
+select{
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+textarea{
+    height: 30px;
+    width:200px;
+    border-radius:5px;
+}

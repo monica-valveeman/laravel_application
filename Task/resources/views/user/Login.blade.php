@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="{{asset('CSS/design1.css')}}">
     </head>
     <body>
+        <br><br><br>
+        <div class="div1">
         <h1>Login</h1>
         <form action="/post_login" method="POST">
             <table>
@@ -24,5 +26,7 @@
                     <td align="left"><p>Don't have an account?<a href="/user/create">Sign Up</a></p></td>
                 </tr>
             </table>
+        </form>
+        </div>
     </body>
 </html>

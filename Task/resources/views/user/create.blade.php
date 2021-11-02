@@ -8,10 +8,12 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{{asset('validation/validation.js')}}"></script>
-
+        <link rel="stylesheet" href="{{asset('CSS/design1.css')}}">
     </head>
     <body>
-        <h1>Create User</h1>
+        <br><br><br>
+        <div class="div1">
+        <h1>Create User</h1>    
             <form id="userform" action="{{route('user.store')}}" method="POST">
                 <table>
                     <tr>
@@ -35,6 +37,8 @@
                         <td align="left"><p>Already have an account?<a href="/login">Login here..</a></p></td>
                     </tr>
                 </table>
+            </form>
+        </div>
     </body>
 </html>
 

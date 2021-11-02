@@ -6,9 +6,11 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{{asset('validation/validation2.js')}}"></script>
-
+        <link rel="stylesheet" href="{{asset('CSS/design1.css')}}">
     </head>
     <body>
+        <br><br><br>
+        <div class="div1">
         <h1>Education Details</h1>
         <form id="educationform" action="/education" method="POST">
             <table>
@@ -77,5 +79,6 @@
                 </tr>
             </table>
         </form>
+        </div>
     </body>
 </html>
