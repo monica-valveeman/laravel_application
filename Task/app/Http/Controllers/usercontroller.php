@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Registeruser;
 use Auth;
-
+use Session;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Str;
 
@@ -43,11 +43,7 @@ class usercontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-     $request->validate([
-         'password'=>'between: 8,10'
-        ]);
-        
+    {   
         $user=new Registeruser();
         $user->firstname=$request->firstname;
         $user->lastname=$request->lastname;
@@ -87,7 +83,7 @@ class usercontroller extends Controller
     }
 
     public function logout(){
-        
+        Session::flush();
         Auth::logout();
         return redirect('/login');
     }
