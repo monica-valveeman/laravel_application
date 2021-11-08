@@ -7,10 +7,7 @@ use App\Education;
 
 class educationcontroller extends Controller
 {
-    public function create(){
-        return view('education.create');
-    }
-
+   
     public function store(Request $request){
         
         $education=new Education();
@@ -21,4 +18,10 @@ class educationcontroller extends Controller
         $education->save();
         return redirect('/education');        
     }
+
+
+    public function create(){
+        return view('education.create');
+    }
+
 }

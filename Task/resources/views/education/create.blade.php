@@ -12,23 +12,14 @@
         <br><br><br>
         <div class="div1">
         <h1>Education Details</h1>
-        <form id="educationform" action="/education" method="POST">
+        <form name="education" id="educationform" action="/education" method="POST">
             <table>
                 <tr>
                     <td align="right"><label>Year of experience:</label></td>
                     <td align="left">
                         <select name="year_of_experience">
-                            <option value="">...Experience...</option>
-                                <?php
-                                    $years = [1,2,3,4,5,6,7,8,9,10];
-                                    $i=0;
-                                    $output="";
-                                        for($i;$i<sizeof($years);$i++)
-                                        {
-                                            $output .= "<option value='".$years[$i]."'>".$years[$i]."</option>";
-                                        }   
-                                    echo $output;
-                                ?>
+                            <option value="1">...Experience...</option>
+                                
                         </select>
                     </td>
                 </tr>
@@ -37,17 +28,7 @@
                     <td align="right"><label>Under Graduate(UG):</label></td>
                     <td align="left">
                         <select name="under_graduate">
-                            <option value="">...UG Degrees...</option>
-                                <?php
-                                    $UG = ['B.Sc Maths','B.Sc Physics','B.Sc Chemistry', 'B.Sc CS','B.Sc IT','B.B.A', 'B.C.A'];
-                                    $j=0;
-                                    $output1="";
-                                        for($j;$j<sizeof($UG);$j++)
-                                        {
-                                            $output1 .= "<option value='".$UG[$j]."'>".$UG[$j]."</option>";
-                                        }   
-                                    echo $output1;
-                                ?>
+                            <option value="BCA">...UG Degrees...</option>
                         </select>
                     </td>
                 </tr>
@@ -55,17 +36,7 @@
                     <td align="right"><label>Post Graduate(PG):</label></td>
                     <td align="left">
                         <select name="post_graduate">
-                            <option value="">...PG Degrees...</option>
-                                <?php
-                                    $PG = ['M.Sc Maths','M.Sc Physics','M.Sc Chemistry', 'M.Sc CS','M.Sc IT','M.B.A', 'M.C.A'];
-                                    $k=0;
-                                    $output2="";
-                                        for($k;$k<sizeof($PG);$k++)
-                                        {
-                                            $output2 .= "<option value='".$PG[$k]."'>".$PG[$k]."</option>";
-                                        }   
-                                    echo $output2;
-                                ?>
+                            <option value="MCA">...PG Degrees...</option>
                         </select>
                     </td>
                 </tr>
