@@ -38,18 +38,18 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'registerusers',
         ],
         'registeruser'=>[
             'driver'=>'session',
             'provider'=>'registerusers',
         ],
 
-        'api' => [
+       /* 'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
-        ],
+        ],*/
     ],
 
     /*
@@ -70,10 +70,10 @@ return [
     */
 
     'providers' => [
-        'users' => [
+       /* 'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
-        ],
+        ],*/
 
         'registerusers'=>[
             'driver'=>'eloquent',

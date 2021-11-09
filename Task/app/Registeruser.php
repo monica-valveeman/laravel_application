@@ -13,10 +13,10 @@ class Registeruser extends Authenticatable
 
 
     public function details(){
-        return $this->hasMany('App\Usedetails');
+        return $this->hasMany('App\Usedetails','user_id');
     }
 
     public function education(){
-        return $this->hasMany('App\Education');
+        return $this->hasMany('App\Education','user_id');
     }
 }

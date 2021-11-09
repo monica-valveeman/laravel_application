@@ -16,34 +16,24 @@
             <table>
                 <tr>
                     <td align="right"><label>Year of experience:</label></td>
-                    <td align="left">
-                        <select name="year_of_experience">
-                            <option value="1">...Experience...</option>
-                                
-                        </select>
-                    </td>
+                    <td align="left"><input type="text" name="year_of_experience"/></td>
+                </tr>
+
+                <tr>
+                    <td align="right"><label>Under Graduate(UG):</label></td>
+                    <td align="left"><input type="text" name="under_graduate"/></td>
                 </tr>
                 
                 <tr>
-                    <td align="right"><label>Under Graduate(UG):</label></td>
-                    <td align="left">
-                        <select name="under_graduate">
-                            <option value="BCA">...UG Degrees...</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
                     <td align="right"><label>Post Graduate(PG):</label></td>
-                    <td align="left">
-                        <select name="post_graduate">
-                            <option value="MCA">...PG Degrees...</option>
-                        </select>
-                    </td>
+                    <td align="left"><input type="text" name="post_graduate"/></td>
                 </tr>
+                
                 <tr>
-                    <td align="right"><label>User Id:</label></td>
+                    <td align="right"><label>User Id:</label</td>
                     <td align="left"><input type="text" name="user_id"/></td>
                 </tr>
+                
                 <tr>
                     <td></td>
                     <td align="left"><input type="submit" value="Submit"/></td>
