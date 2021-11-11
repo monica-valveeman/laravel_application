@@ -24,7 +24,7 @@ $('select[name="state"]').on('change', function() {
         $('select[name="city"]').empty();
     }
 });
-    $("#userdetailform").validate({
+    $("#userform").validate({
 
         rules:{
         profile_upload:{

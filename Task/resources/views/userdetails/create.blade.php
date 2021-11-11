@@ -41,10 +41,6 @@
                         </select></td>
                     </tr>
                     <tr>
-                        <td align="right"><label>User Id:</label></td>
-                        <td align="left"><input type="text" name="user_id"/></td>
-                    </tr>
-                    <tr>
                         <td></td>
                         <td align="left"><input type="submit" value="Submit"/></td>
                     </tr>
