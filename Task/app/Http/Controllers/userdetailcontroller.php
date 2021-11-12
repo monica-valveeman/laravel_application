@@ -25,11 +25,11 @@ class userdetailcontroller extends Controller
 
             $userdetail->date_of_birth=$request->date_of_birth;
             $userdetail->address=$request->address;
-
+            $userdetail->user_id=$request->user_id;
             $userdetail->state=$request->state;
             $userdetail->city=$request->city;
 
-            $userdetail->user_id=$request->user_id;
+            
             
             $userdetail->save();
 

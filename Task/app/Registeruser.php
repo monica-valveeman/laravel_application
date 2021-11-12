@@ -12,11 +12,11 @@ class Registeruser extends Authenticatable
     protected $fillable=['firstname','lastname','email_id','password'];
 
 
-    public function details(){
-        return $this->hasMany('App\Usedetails','user_id');
+    public function userdetail(){
+        return $this->hasOne('App\Usedetails','user_id');
     }
 
     public function education(){
-        return $this->hasMany('App\Education','user_id');
+        return $this->hasOne('App\Education','user_id');
     }
 }

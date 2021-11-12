@@ -14,6 +14,7 @@ class educationcontroller extends Controller
         $education->year_of_experience=$request->year_of_experience;
         $education->under_graduate=$request->under_graduate;
         $education->post_graduate=$request->post_graduate;
+        $education->user_id=$request->user_id;
         $education->save();
         return redirect('/education');        
     }

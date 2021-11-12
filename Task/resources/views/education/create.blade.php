@@ -28,7 +28,11 @@
                     <td align="right"><label>Post Graduate(PG):</label></td>
                     <td align="left"><input type="text" name="post_graduate"/></td>
                 </tr>
-                
+                <tr>
+                        <td align="right"><label>User_id:</label></td>
+                        <td align="left"><input type="text" name="user_id"/></td>
+                    </tr>
+                   
                 <tr>
                     <td></td>
                     <td align="left"><input type="submit" value="Submit"/></td>

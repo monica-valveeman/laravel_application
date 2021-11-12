@@ -12,6 +12,6 @@ class Education extends Model
 
     
     public function registeruser(){
-        return $this->belongsTo('App\Registeruser');
+        return $this->belongsTo('App\Registeruser','user_id');
     }
 }

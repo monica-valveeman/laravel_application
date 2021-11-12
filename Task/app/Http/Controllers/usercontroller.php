@@ -68,6 +68,8 @@ class usercontroller extends Controller
         $user->email_id=$request->email_id;
         $user->password=Hash::make($request->password,['rounds'=>10,]);
         $user->save();
+
+        $id=$user->id;
         
         $userdetail=new Userdetails();
 
@@ -82,6 +84,8 @@ class usercontroller extends Controller
 
         $userdetail->state=$request->state;
         $userdetail->city=$request->city;
+        $userdetail->user_id=$request->registerusers()->id;
+        
         
         $userdetail->save();
 
@@ -89,7 +93,6 @@ class usercontroller extends Controller
         $education->year_of_experience=$request->year_of_experience;
         $education->under_graduate=$request->under_graduate;
         $education->post_graduate=$request->post_graduate;
-        
         $education->save();
         
         return redirect('/user')->with('success','Registration Successfull !!!');
