@@ -27,7 +27,7 @@ $(document).ready(function(){
         var emailReg = /^(\w{2,})+@[a-zA-z]+\.[a-z]{2,3}$/;
         if(email_id==""){
             $(this).after('<span class="error error2">*required</span>');
-            }
+        }
        else if(!emailReg.test(email_id)) {
             $(this).after('<span class="error error2">*invalid Email Format</span>');
         }
@@ -47,6 +47,34 @@ $(document).ready(function(){
             remote:'/email_validate'
             
         },
+        profile_upload:{
+            required:true
+        },
+        date_of_birth:{
+            required:true
+        },
+        address:{
+            required:true            
+        },
+        state:{
+            required:true
+        },
+        city:{
+            required:true
+        },
+        year_of_experience:{
+            required:true
+        },
+        under_graduate:{
+            required:true
+        },
+        post_graduate:{
+            required:true
+        },
+        user_id:{
+            required:true,
+            number:true
+        },
     },
     messages:{
         firstname:{
@@ -60,6 +88,5 @@ $(document).ready(function(){
             remote:'*already exists'
         },
     },
-
-    });
+});
 });

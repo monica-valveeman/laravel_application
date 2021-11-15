@@ -49,7 +49,7 @@
                             <select name="state">
                                 <option value="">---Select State---</option>
                                 @foreach($states as $key=>$value)
-                                    <option value="{{$key}}">{{$value}}</option>
+                                    <option value="{{$value}}">{{$value}}</option>
                                 @endforeach
                             </select>
                         </td>
@@ -66,7 +66,7 @@
                         <select name="year_of_experience">
                             <option value="">---Years---</option>
                             @foreach($years as $key=>$value)
-                            <option value="{{$key}}">{{$value}}</option>
+                            <option value="{{$value}}">{{$value}}</option>
                             @endforeach
                         </select>
 
@@ -79,7 +79,7 @@
                         <select name="under_graduate">
                         <option value="">---UG Degrees---</option>
                             @foreach($UG as $key=>$value)
-                            <option value="{{$key}}">{{$value}}</option>
+                            <option value="{{$value}}">{{$value}}</option>
                             @endforeach
                         </select>
                     </td>
@@ -91,7 +91,7 @@
                         <select name="post_graduate">
                         <option value="">---PG Degrees---</option>
                             @foreach($PG as $key=>$value)
-                            <option value="{{$key}}">{{$value}}</option>
+                            <option value="{{$value}}">{{$value}}</option>
                             @endforeach
                         </select>
                     </td>
