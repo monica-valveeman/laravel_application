@@ -33,6 +33,30 @@ $(document).ready(function(){
         }
 
     });
+
+    $('select[name="state"]').on('change', function() {
+        var stateID = $(this).val();
+        if(stateID) {
+            $.ajax({
+                url: '/user/create/'+stateID,
+                type: "GET",
+                dataType: "json",
+                success:function(data) {
+    
+                    
+                    $('select[name="city"]').empty();
+                    $.each(data, function(key, value) {
+                        $('select[name="city"]').append('<option value="'+ key +'">'+ value +'</option>');
+                    });
+    
+    
+                }
+            });
+        }else{
+            $('select[name="city"]').empty();
+        }
+    });
+    
     $("#userform").validate({
 
         rules:{
@@ -78,15 +102,40 @@ $(document).ready(function(){
     },
     messages:{
         firstname:{
-            required:''
+            required:'*required'
         },
         lastname:{
-            required:''
+            required:'*required'
         },
         email_id:{
-            required:'',
+            required:'*required',
             remote:'*already exists'
         },
+        profile_upload:{
+            required:'*required'
+        },
+        date_of_birth:{
+            required:'*required'
+        },
+        address:{
+            required:'*required'            
+        },
+        state:{
+            required:'*required'
+        },
+        city:{
+            required:'*required'
+        },
+        year_of_experience:{
+            required:'*required'
+        },
+        under_graduate:{
+            required:'*required'
+        },
+        post_graduate:{
+            required:'*required'
+        },
+    
     },
 });
 });

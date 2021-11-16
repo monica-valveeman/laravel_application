@@ -8,8 +8,6 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{{asset('validation/validation.js')}}"></script>
-        <script type="text/javascript" src="{{asset('validation/validation1.js')}}"></script>
-        <script type="text/javascript" src="{{asset('validation/validation2.js')}}"></script>
         <link rel="stylesheet" href="{{asset('CSS/design1.css')}}">
     </head>
     <body>
@@ -49,7 +47,7 @@
                             <select name="state">
                                 <option value="">---Select State---</option>
                                 @foreach($states as $key=>$value)
-                                    <option value="{{$value}}">{{$value}}</option>
+                                    <option value="{{$key}}">{{$value}}</option>
                                 @endforeach
                             </select>
                         </td>
