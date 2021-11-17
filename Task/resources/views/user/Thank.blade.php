@@ -27,9 +27,15 @@
                         <td>{{$user->firstname}}</td>
                         <td>{{$user->lastname}}</td>
                         <td>{{$user->email_id}}</td>
-                        <td></td>
+                        <td>{{$user->userdetail->profile_upload}}</td>
+
+                        @foreach($educations as $education)
+                            <td>{{$education->education}}</td>
+                        @endforeach
+                    
                     </tr>
                     @endforeach
+                    
                 <tbody>
 
                 </tbody>

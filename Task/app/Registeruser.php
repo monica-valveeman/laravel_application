@@ -13,7 +13,7 @@ class Registeruser extends Authenticatable
 
 
     public function userdetail(){
-        return $this->hasOne('App\Usedetails','user_id');
+        return $this->hasOne('App\Userdetails','user_id');
     }
 
     public function education(){
