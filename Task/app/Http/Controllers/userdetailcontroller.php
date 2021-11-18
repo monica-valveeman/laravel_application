@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Userdetails;
+use App\Education;
 use DB;
 
 class userdetailcontroller extends Controller
 {
+
+    public function index(){
+        $users=Userdetails::with('registerusers')->get();
+        $educations=Education::with('registeruser')->get();
+        return view('user.Thank', compact('users','educations'));
+    }
     public function create(){
         $states=DB::table("state")->pluck("state_name","id");
         return view('userdetails.create',compact('states'));

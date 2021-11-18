@@ -23,7 +23,8 @@ Route::get('/dashboard','usercontroller@dashboard');
 Route::get('/logout','usercontroller@logout');
 Route::get('/user/create','usercontroller@retrievestate');
 Route::get('/user/create/{id}','usercontroller@cityrequest');
-
+Route::get('/user','userdetailcontroller@index');
+//Route::get('/user','educationcontroller@index');
 Route::get('/userdetails/create','userdetailcontroller@create');
 Route::post('/userdetails','userdetailcontroller@store')->name('userdetails.store');
 

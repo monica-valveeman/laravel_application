@@ -22,9 +22,9 @@ class usercontroller extends Controller
 
     public function index()
     {
-        $users=Registeruser::with('userdetail')->get();
-        $educations=Registeruser::with('education')->get();
-        return view('user.Thank',compact('users','educations'));
+        $educations=Education::all();
+
+        return view('user.Thank',compact('educations'));
     }
 
     /**

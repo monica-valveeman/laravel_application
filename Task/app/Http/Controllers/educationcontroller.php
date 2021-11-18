@@ -7,6 +7,10 @@ use App\Education;
 
 class educationcontroller extends Controller
 {
+    public function index(){
+        //$educations=Education::with('registeruser')->get();
+        //return view('user.Thank', compact('educations'));
+    }
    
     public function store(Request $request){
         

@@ -2,11 +2,11 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
-    <body>
+    <body>         
         <form action="/logout">
             <table border="1">
                 
-                <thead>
+            <h1>Users</h1>
                     <tr>
                         <th>ID</th>
                         <th>Firstname</th>
@@ -16,37 +16,45 @@
                         <th>Address</th>
                         <th>State</th>
                         <th>City</th>
+                    </tr>
+                    @foreach($users as $user)
+                    <tr>
+                        
+                        <td>{{$user->registerusers->id}}</td>
+                        <td>{{$user->registerusers->firstname}}</td>
+                        <td>{{$user->registerusers->lastname}}</td>
+                        <td>{{$user->registerusers->email_id}}</td>
+                        <td>{{$user->profile_upload}}</td>
+                        <td>{{$user->address}}</td>
+                        <td>{{$user->state}}</td>
+                        <td>{{$user->city}}</td>
+                    </tr>
+                    @endforeach
+                </table>
+                <table border="1"> 
+                    <tr>
+                        <th>Id</th>
                         <th>Year of experience</th>
                         <th>Under Graduate</th>
                         <th>Post Graduate</th>
                     </tr>
-                </thead>
-                    @foreach($users as $user)
+                        
+                    @foreach($educations as $education)
                     <tr>
-                        <td>{{$user->id}}</td>
-                        <td>{{$user->firstname}}</td>
-                        <td>{{$user->lastname}}</td>
-                        <td>{{$user->email_id}}</td>
-                        <td>{{$user->userdetail->profile_upload}}</td>
-
-                        @foreach($educations as $education)
-                            <td>{{$education->education}}</td>
-                        @endforeach
-                    
+                        <td>{{$education->user_id}}</td>
+                        <td>{{$education->year_of_experience}}</td>
+                        <td>{{$education->under_graduate}}</td>
+                        <td>{{$education->post_graduate}}</td>
                     </tr>
                     @endforeach
-                    
-                <tbody>
+                </table>
 
-                </tbody>
-            </table>
-
-            <table>
-            <tr>
-                    <td align="right"><input type="submit" class="btn btn-primary" value="Logoff"/></td>
-                </tr>
-            </table>
-        </form>
+                <table>
+                    <tr>
+                        <td align="right"><input type="submit" class="btn btn-primary" value="Logoff"/></td>
+                    </tr>
+                </table>
+            </form>
     </body>
 </html>
     
