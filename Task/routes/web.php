@@ -16,15 +16,24 @@ Route::get('/', function () {
 });
 
 Route::resource('user','usercontroller');
+
 Route::get('/email_validate','usercontroller@email_validate');
+
 Route::get('/login','usercontroller@login');
 Route::post('/post_login','usercontroller@post_login');
+
 Route::get('/dashboard','usercontroller@dashboard');
 Route::get('/logout','usercontroller@logout');
+
 Route::get('/user/create','usercontroller@retrievestate');
 Route::get('/user/create/{id}','usercontroller@cityrequest');
+
+Route::get('/user/{id}/edit','usercontroller@retrievestate');
+//Route::get('/user/{id}/edit','usercontroller@cityrequest');
+
 Route::get('/user','userdetailcontroller@index');
 //Route::get('/user','educationcontroller@index');
+
 Route::get('/userdetails/create','userdetailcontroller@create');
 Route::post('/userdetails','userdetailcontroller@store')->name('userdetails.store');
 

@@ -41,6 +41,7 @@ class usercontroller extends Controller
         return view('user.create',compact('states','years','UG','PG'));
     }
 
+
     public function cityrequest($id)
     {
         $cities = DB::table("city")->where("state_id",$id)->pluck("city_name","id");
@@ -154,7 +155,15 @@ class usercontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $users=Registeruser::find($id);
+        $userdetail=Userdetails::find($id);
+        $education=Education::find($id);
+        $states=DB::table("state")->pluck("state_name","id");
+        $years=[1,2,3,4,5,6,7,8,9,10];
+        $UG = ['B.Sc Maths','B.Sc Physics','B.Sc Chemistry', 'B.Sc CS','B.Sc IT','B.B.A', 'B.C.A'];
+        $PG = ['M.Sc Maths','M.Sc Physics','M.Sc Chemistry', 'M.Sc CS','M.Sc IT','M.B.A', 'M.C.A'];
+        
+        return view('user.edit',compact('users','userdetail','education','states','years','UG','PG'));
     }
 
     /**
@@ -166,7 +175,42 @@ class usercontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=Registeruser::find($id);
+        $user->firstname=$request->firstname;
+        $user->lastname=$request->lastname;
+        $user->email_id=$request->email_id;
+        $user->password=Hash::make($request->password,['rounds'=>10,]);
+        $user->save();
+
+        $id=$user->id;
+        
+        $userdetail=Userdetails::find($id);
+
+        if($files=$request->file('profile_upload')){  
+            $name=$files->getClientOriginalName();  
+            $files->move('userprofiles',$name);  
+            $userdetail->profile_upload=$name;  
+        }  
+
+        $userdetail->date_of_birth=$request->date_of_birth;
+        $userdetail->address=$request->address;
+
+        $userdetail->state=$request->state;
+        $userdetail->city=$request->city;
+        $userdetail->user_id=$id;
+        
+        
+        $userdetail->save();
+
+        $education=Education::find($id);
+        $education->year_of_experience=$request->year_of_experience;
+        $education->under_graduate=$request->under_graduate;
+        $education->post_graduate=$request->post_graduate;
+        $education->user_id=$id;
+        $education->save();
+        
+        return redirect('/user')->with('success','Registration Successfull !!!');
+   
     }
 
     /**
