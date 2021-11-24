@@ -48,5 +48,10 @@ class userdetailcontroller extends Controller
         $cities = DB::table("city")->where("state_id",$id)->pluck("city_name","id");
         return json_encode($cities);
     }
-
+    public function edit($id){
+        
+        $users=Userdetails::with('registerusers')->find($id);
+        
+        return view('user.edit',compact('users'));
+    }
 }

@@ -39,6 +39,11 @@
                     </tr>
                     @endforeach
                 </table>
+
+                
+                <p><?php //print_r($users)?><p>
+            
+    
                 <table border="1"> 
                     <tr>
                         <th>Id</th>
@@ -63,6 +68,7 @@
                     </tr>
                     @endforeach
                 </table>
+
                 <form action="/logout">
                 <table>
                     <tr>
