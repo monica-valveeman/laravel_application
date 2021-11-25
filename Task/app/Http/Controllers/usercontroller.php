@@ -175,14 +175,24 @@ class usercontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        $users=Userdetails::with('registerusers')->find($id);
+    
+        
+    //    print "<pre>";
+    //    print_r($request->all());
+    //    print_r($request->firstname);
+    //    exit;
+        $user=Registeruser::find($id);
+        
+        $user->firstname=$request->get('firstname');
+        $user->lastname=$request->get('lastname');
+        
         /*Registeruser::create([
             'firstname'=>$request->get('firstname'),
             'lastname'=>$request->get('lastname'),
             'email_id'=>$request->get('email_id'),
             'password'=>Hash::make($request->get('password'),['rounds'=>10,])
         ]);*/
-        $users->registerusers->firstname=$request->firstname;
+      /* $users->registerusers->firstname=$request->firstname;
         if($files=$request->file('profile_upload')){  
             $name=$files->getClientOriginalName();  
             $files->move('userprofiles',$name);  
@@ -195,8 +205,10 @@ class usercontroller extends Controller
             $users->state=$request->state;
             $users->city=$request->city;
             $users->user_id=$id;
-        
-            $users->save();
+            print "<Prev>";
+            print_r($users);
+            exit;
+            $users->save();*/
         
         return redirect('/user')->with('success','Registration Successfull !!!'); 
 
