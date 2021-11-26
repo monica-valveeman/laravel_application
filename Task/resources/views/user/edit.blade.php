@@ -48,7 +48,7 @@
                             <select name="state" value="{{$users->state}}">
                                 <option value="">---Select State---</option>
                                 @foreach($states as $key=>$value)
-                                    <option value="{{$key}}">{{$value}}</option>
+                                    <option value="{{$value}}">{{$value}}</option>
                                 @endforeach
                             </select>
                         </td>
@@ -56,6 +56,10 @@
                     <tr>
                         <td align="right"><label>City:</label></td>
                         <td align="left"><select name="city" value="{{$users->city}}">
+                        <option value="">---Select City---</option>
+                        @foreach($cities as $key=>$value)
+                            <option value="{{$value}}">{{$value}}</option>
+                            @endforeach
                         </select></td>
                     </tr>
 

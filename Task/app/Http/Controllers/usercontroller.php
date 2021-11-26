@@ -35,10 +35,11 @@ class usercontroller extends Controller
 
     public function retrievestate(){
         $states=DB::table("state")->pluck("state_name","id");
+        $cities=DB::table("city")->pluck("city_name","id");
         $years=[1,2,3,4,5,6,7,8,9,10];
         $UG = ['B.Sc Maths','B.Sc Physics','B.Sc Chemistry', 'B.Sc CS','B.Sc IT','B.B.A', 'B.C.A'];
         $PG = ['M.Sc Maths','M.Sc Physics','M.Sc Chemistry', 'M.Sc CS','M.Sc IT','M.B.A', 'M.C.A'];
-        return view('user.create',compact('states','years','UG','PG'));
+        return view('user.create',compact('states','cities','years','UG','PG'));
     }
 
 
@@ -159,11 +160,12 @@ class usercontroller extends Controller
         $users=Userdetails::with('registerusers')->find($id);
         $education=Education::find($id);
         $states=DB::table("state")->pluck("state_name","id");
+        $cities=DB::table("city")->pluck("city_name","id");
         $years=[1,2,3,4,5,6,7,8,9,10];
         $UG = ['B.Sc Maths','B.Sc Physics','B.Sc Chemistry', 'B.Sc CS','B.Sc IT','B.B.A', 'B.C.A'];
         $PG = ['M.Sc Maths','M.Sc Physics','M.Sc Chemistry', 'M.Sc CS','M.Sc IT','M.B.A', 'M.C.A'];
         
-        return view('user.edit',compact('users','education','states','years','UG','PG'));
+        return view('user.edit',compact('users','education','states','cities','years','UG','PG'));
     }
 
     /**

@@ -26,7 +26,7 @@ Route::get('/dashboard','usercontroller@dashboard');
 Route::get('/logout','usercontroller@logout');
 
 Route::get('/user/create','usercontroller@retrievestate');
-Route::get('/user/create/{id}','usercontroller@cityrequest');
+//Route::get('/user/create/{id}','usercontroller@cityrequest');
 
 Route::get('/user/{id}/edit','usercontroller@retreivestate');
 //Route::get('/user/{id}/edit','usercontroller@cityrequest');
